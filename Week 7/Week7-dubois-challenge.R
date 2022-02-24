@@ -19,8 +19,6 @@ pink <- "#ffc0cb"
 green <- "#008746"
 blue <- "#4682b4"
 grey <- "grey60"
-font_add_google("Public Sans")
-font_add_google("Space mono", family = "spacemono")
 font_add_google("JetBrains Mono", family = "jetbrains")
 font_add_google("B612 Mono", family = "b612")
 showtext_auto()

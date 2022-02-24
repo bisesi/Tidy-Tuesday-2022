@@ -71,7 +71,8 @@ red <- "#dc143c"
 pink <- "#ffc0cb"
 green <- "#00aa00"
 blue <- "#4682b4"
-font_add_google("Public Sans")
+font_add_google("JetBrains Mono", family = "jetbrains")
+font_add_google("B612 Mono", family = "b612")
 showtext_auto()
 
 #Make plot, spiral goes pink > blue > brown > gold > grey > red
@@ -79,7 +80,7 @@ Mainplot <- ggplot() +
   geom_line(data = spiral, aes(x = x, y = y, group = interaction(n, rev),
                                     color = factor(military_hometown_of_record)), size = 4) + 
   geom_text(data = textlabels, aes(x = revolution - 0.5, y = y, label = text),
-            hjust = 1, size = 3, family = 'Public Sans') + 
+            hjust = 1, size = 3, family = "b612") + 
   labs(title = "TUSKEGEE AIRMEN",
     subtitle = "MAJOR MIDWESTERN HOMETOWNS OF RECORD",
     caption = "DATA: COMMEMORATIVE AIR FORCE | VISUALIZATION: A BISESI") + 
@@ -90,7 +91,7 @@ Mainplot <- ggplot() +
   theme_void() + 
   theme(plot.margin = margin(5, 0, 5, 0),
     plot.background = element_rect(color = tan, fill = tan),
-    plot.title = element_text(family = "Public Sans", size = 20, hjust = 0.5),
-    plot.subtitle=element_text(family = "Public Sans", size = 17, hjust = 0.5),
-    plot.caption = element_text(family = "Public Sans", size = 8))
+    plot.title = element_text(family = "jetbrains", size = 20, hjust = 0.5),
+    plot.subtitle=element_text(family = "jetbrains", size = 17, hjust = 0.5),
+    plot.caption = element_text(family = "jetbrains", size = 8))
 
