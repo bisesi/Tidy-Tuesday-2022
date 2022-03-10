@@ -35,7 +35,7 @@ data <- regions %>%
   count(status_2001, status_2020, Region_Name, netchange) %>%
   gather_set_data(x = 1:3) %>%
   mutate(y = case_when(y == 'F' ~ "Free",
-                       y == 'PF' ~ "Partially Free",
+                       y == 'PF' ~ "Partly Free",
                        y == 'NF' ~ "Not Free",
                        TRUE ~ y)) %>%
   drop_na(x, y)
